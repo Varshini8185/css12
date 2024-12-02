@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #box{
+    border: 3px solid;
+    overflow: scroll;
+    height: 140px;
+    width: 150px;
+    background-color: rgb(174, 170, 163);
+    margin: 50px auto;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    section{
+        perspective: 130px;
+    }
+    #rotate:checked ~ #box{
+        transform: rotate(10deg);
+    }
+    #rotate1:checked ~ #box{
+        transform: rotate(45deg);
+    }
+    #rotate2:checked ~ #box{
+        transform:rotate3d(5,3,5,45deg);
+    }
+    #rotate3:checked ~ #box{
+        transform: rotateX(45deg);
+    }
+    #rotate4:checked ~ #box{
+        transform: rotateY(100deg);
+    }
+    #skew1:checked ~ #box{
+        transform: skewX(30deg);
+    }
+    #skew2:checked ~ #box{
+        transform: skewY(40deg);
+    }
+    #scale:checked ~ #box{
+        transform: scale(2,2);
+    }
+    #translate:checked ~ #box{
+        transform: translate(20px,20px);
+    }
+    #trans{
+        border: 3px solid;
+    }
+    img{
+        width: 150px;
+        height: 140px;
+    }
+</style>
+</head>
+<body>
+    <section>
+    <div id="trans">
+        <h1>The transform property</h1>
+        <input type="radio" id="transform" name="rotate">transform: none;<br><br>
+        <input type="radio" id="rotate" name="rotate">transform: rotate(10deg);<br><br>
+        <input type="radio" id="rotate1" name="rotate">transform: rotate(45deg);<br><br>
+        <input type="radio" id="rotate2" name="rotate">transform: rotate3d(1,2,1,45deg);<br><br>
+        <input type="radio" id="rotate3" name="rotate">transform: rotateX(50deg);<br><br>
+        <input type="radio" id="rotate4" name="rotate">transform: rotateY(100deg);<br><br>
+        <input type="radio" id="skew1" name="rotate">transform: skewX(30deg);<br><br>
+        <input type="radio" id="skew2" name="rotate">transform: skewY(40deg);<br><br>
+        <input type="radio" id="scale" name="rotate">transform: scale(2,2);<br><br>
+        <input type="radio" id="translate" name="rotate">transform: translate(20px,20px);<br><br>
+        <div id="box"><img src="./img2.jpg"/></div>
+    </div>
+    </section>
+    
+</body>
+</html>
